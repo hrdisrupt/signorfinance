@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-node $NODE_OPTIONS /app/server.js  --userDir $USER_DIR  --settings $SETTINGS $SAFE $FLOWS --port $PORT &
+#node $NODE_OPTIONS /app/server.js  --userDir $USER_DIR  --settings $SETTINGS $SAFE $FLOWS --port $PORT &
 # python3 /app/api/webApi.py
 # npm start
 nginx -g daemon off;

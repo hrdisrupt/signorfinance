@@ -13,12 +13,14 @@ RUN apt-get update
 RUN apt-get upgrade -y
 RUN npm install --silent
 RUN npm install antd
+RUN npm install typescript
 
 COPY public ./public
 COPY src ./src
 COPY tsconfig.json ./
 COPY tsconfig.node.json ./
 COPY vite.config.ts ./
+COPY index.html ./
 
 #ENV NODE_ENV production
 # ENTRYPOINT ["/app/copyFiles.sh"]
@@ -33,9 +35,9 @@ RUN npm run build
 # production environment
 FROM nginx:stable-alpine
 # RUN rm -r /etc/nginx/sites-enabled/default
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-RUN chmod +x copyFiles.sh
+#RUN chmod +x copyFiles.sh
 EXPOSE 80
 
 # FROM node:14.18.1 AS server
