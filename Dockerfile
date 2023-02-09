@@ -16,7 +16,6 @@ RUN npm install antd
 
 COPY public ./public
 COPY src ./src
-COPY jsconfig.json ./
 
 #ENV NODE_ENV production
 # ENTRYPOINT ["/app/copyFiles.sh"]
