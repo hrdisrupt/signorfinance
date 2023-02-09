@@ -18,7 +18,7 @@ COPY public ./public
 COPY src ./src
 COPY tsconfig.json ./
 COPY tsconfig.node.json ./
-COPY vite.config.json ./
+COPY vite.config.ts ./
 
 #ENV NODE_ENV production
 # ENTRYPOINT ["/app/copyFiles.sh"]
