@@ -16,6 +16,9 @@ RUN npm install antd
 
 COPY public ./public
 COPY src ./src
+COPY tsconfig.json ./
+COPY tsconfig.node.json ./
+COPY vite.config.json ./
 
 #ENV NODE_ENV production
 # ENTRYPOINT ["/app/copyFiles.sh"]
