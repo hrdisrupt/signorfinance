@@ -1,0 +1,10 @@
+version: "3"
+services:
+
+  hrdisruptdashboard:
+
+    build: .
+    image: hrdisruptdashboard:latest
+    container_name: hrdisruptdashboard
+    volumes:
+      - /etc/localtime:/etc/localtime
