@@ -17,14 +17,13 @@ RUN npm install antd
 COPY public ./public
 COPY src ./src
 COPY jsconfig.json ./
-COPY config-overrides.js ./
 
 #ENV NODE_ENV production
 # ENTRYPOINT ["/app/copyFiles.sh"]
 #CMD [ "npm run", "dev"]
 
 ENV PROXY_PORT 5000
-EXPOSE 3000
+EXPOSE 5173
 EXPOSE 5000
 
 RUN npm run build
