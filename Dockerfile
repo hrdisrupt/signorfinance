@@ -34,8 +34,6 @@ FROM nginx:stable-alpine
 # RUN rm -r /etc/nginx/sites-enabled/default
 COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY copyFiles.sh ./
-COPY server.js ./
 RUN chmod +x copyFiles.sh
 EXPOSE 80
 
